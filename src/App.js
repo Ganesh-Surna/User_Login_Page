@@ -12,12 +12,11 @@ const App = () => {
   };
 
   const handleLogout = () => {
-    // Remove user data from local storage and set 'loggedIn' to false
+    
     localStorage.removeItem("userData");
     setLoggedIn(false);
   };
 
-  // Check if the user is already logged in
   const userData = JSON.parse(localStorage.getItem("userData"));
 
   return (

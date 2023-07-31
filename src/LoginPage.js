@@ -8,18 +8,18 @@ const LoginPage = ({ onLogin }) => {
   const [error, setError] = useState("");
 
   const handleLogin = () => {
-    // Replace this with your authentication logic (e.g., API call, etc.)
+  
     if (username === "user" && password === "password") {
       const userData = {
         username,
         password
-        // Any other user data you want to store
+ 
       };
 
-      // Save user data to local storage
+      
       localStorage.setItem("userData", JSON.stringify(userData));
 
-      // Call the onLogin function passed as a prop to notify parent component
+      
       onLogin();
     } else {
       setError("Invalid username or password");
